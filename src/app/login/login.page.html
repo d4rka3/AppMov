@@ -1,13 +1,34 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+   <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+   <div class="logo-container">
+    <ion-img src="assets/img/duoc.png" class="logo"></ion-img>
+  </div>
+  
+<br>
+    <ion-item  class="form-container">
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="Usuario"></ion-input>
+    </ion-item>
+<br>
+    <ion-item class="form-container">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="{{ hide ? 'password' : 'text' }}"></ion-input>
+      <ion-icon name="{{ hide ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePassword()"></ion-icon>
+    </ion-item>
+
+<br>
+
+
+<ion-button class="custom-input" (click)="login()">Ingresar </ion-button>
+
+  <ion-link [routerLink]="['/recuperar']" color="primary" id="ContraseñaPerdida">
+      ¿Olvidaste tu contraseña?, clickea aqui.
+  </ion-link>
+  
 </ion-content>
+

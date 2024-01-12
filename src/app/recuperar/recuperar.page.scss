@@ -1,0 +1,81 @@
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: slideDown 2s ease-out;
+   
+}
+
+.logo{
+    text-align: center;
+    max-width: 19.9375rem;
+    max-height: 4.9375rem; 
+
+}
+
+ion-content {
+--background : black; 
+ animation: slideup 1.3s ease-out;
+
+}
+
+
+ion-item{
+    background-color: white ;
+    top: 60PX;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: "confortaa", sans-serif;
+    font-size: -20px;
+    margin: auto;
+    padding: 2px;
+    width: 280px;  
+    
+}
+
+h2{
+    position: relative;
+    border : solid 2px #000000;
+    padding: 1px ;
+    width:280px;
+    font-family: "confortaa", sans-serif;
+    font-size: 15px;
+    color: #0059ff51;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+    animation: slideup 1.5s ease-out;
+}
+
+.boton-perso{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+mat-spinner {
+    margin-top: 10px ;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 2x;
+    height: 2px;
+}
+
+p{
+    margin-top: 20px ;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 2x;
+    height: 2px;;
+}
+
+
+
