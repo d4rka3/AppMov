@@ -1,15 +1,65 @@
+
 <ion-header>
   <mat-toolbar>
-   <ion-buttons slot="start">
-     <ion-back-button defaultHref="/"></ion-back-button>
-   </ion-buttons>
- </mat-toolbar>
- </ion-header>
- 
- <ion-content>
- <ion-card>
-   <ion-card-content class="card">
-     <p class="animacion-user" >Bienvenido, {{ Usuario }}</p>
-   </ion-card-content>
- </ion-card>
- </ion-content>
+    <ion-button [routerLink]="['/perfil']" shape="round">
+      <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+    </ion-button >
+  </mat-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content class="card">
+      <p class="animacion-user">Bienvenido, {{ Usuario }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>Sección: </ion-card-title>
+    <ion-card-content>Alumnos: </ion-card-content>
+    <ion-card-content>Ausentes: </ion-card-content>
+
+    <ion-list>
+      <ion-item>
+        Alumno 1
+        <ion-thumbnail slot="end">
+          <ion-toggle></ion-toggle>
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item>
+        Alumno 2
+        <ion-thumbnail slot="end">
+          <ion-toggle></ion-toggle>
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item>
+        Alumno 3
+        <ion-thumbnail slot="end">
+          <ion-toggle></ion-toggle>
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item>
+        Alumno 4
+        <ion-thumbnail slot="end">
+          <ion-toggle></ion-toggle>
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item>
+        Alumno 5
+        <ion-thumbnail slot="end">
+          <ion-toggle></ion-toggle>
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item>
+        Alumno 6
+        <ion-thumbnail slot="end">
+          <ion-toggle></ion-toggle>
+        </ion-thumbnail>
+      </ion-item>
+    </ion-list>
+
+    <div style="text-align: right;">
+      <!-- Eliminé el bloque del ion-alert ya que mencionaste que quieres eliminarlo -->
+    </div>
+  </ion-card>
+</ion-content>
