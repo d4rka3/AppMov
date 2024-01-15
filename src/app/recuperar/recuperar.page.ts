@@ -10,6 +10,7 @@ export class RecuperarPage {
   
   showSpinner = false; 
   loadingPercentage = 0;
+  alertButtons=['Entendido'];
 
   constructor(private router: Router) { }
 

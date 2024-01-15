@@ -19,8 +19,8 @@
     <ion-input type="text" #Usuario></ion-input>
   </ion-item>
 
-<ion-button class="boton-perso"  (click)="iniciarCarga()">RECUPERAR</ion-button>
-
+<ion-button id="recuperar" class="boton-perso"  (click)="iniciarCarga()">RECUPERAR</ion-button>
+<ion-alert trigger="recuperar" header="Envio exitoso" message="se envio un correo para que cambie su contraseña" [buttons]="alertButtons"></ion-alert>
 <mat-spinner *ngIf="showSpinner"></mat-spinner>
 <p *ngIf="showSpinner">Cargando...: {{ loadingPercentage }}%</p>    
 
