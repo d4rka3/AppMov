@@ -1,0 +1,60 @@
+{
+  "AlumnosRegistro": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "rut": "123456789",
+      "correo": "juan@example.com",
+      "contrasena": "contraseña1"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "González",
+      "rut": "987654321",
+      "correo": "maria@example.com",
+      "contrasena": "contraseña2"
+    },
+    {
+      "id": 3,
+      "nombre": "Diego",
+      "apellido": "Rojas",
+      "rut": "209855798",
+      "correo": "Diego@gmail.com",
+      "contrasena": "12345"
+    },
+    {
+      "id": 4,
+      "nombre": "Pedro",
+      "apellido": "Alfonso",
+      "rut": "123456789",
+      "correo": "Pedro@gmail.com",
+      "contrasena": "12345"
+    },
+    {
+      "id": 5,
+      "nombre": "miguel",
+      "apellido": "ramon",
+      "rut": "1234567899",
+      "correo": "miguel@gmail.com",
+      "contrasena": "123456"
+    },
+    {
+      "id": 6,
+      "nombre": "dfgs",
+      "apellido": "fsdg",
+      "rut": "6757865678",
+      "correo": "gdfgsdfsg@cvfhg",
+      "contrasena": "fasdadfs"
+    },
+    {
+      "id": 7,
+      "nombre": "Matias",
+      "apellido": "salazar",
+      "rut": "123456567",
+      "correo": "matias@gmail.com",
+      "contrasena": "123456"
+    }
+  ]
+}

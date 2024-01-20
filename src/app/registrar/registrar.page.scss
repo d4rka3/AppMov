@@ -1,0 +1,28 @@
+
+
+ion-button{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .form-container{
+    flex-direction: column;
+    align-items: center ;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.label-custom{
+
+    flex-direction: column;
+    align-items: center ;
+    margin-left: -0px;
+    margin-right: 100px;
+    font-size: 18px;
+    
+
+}

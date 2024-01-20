@@ -1,0 +1,49 @@
+<!-- registrar.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <form>
+    
+      <ion-item class="form-container">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" name="nombre" [(ngModel)]="newAlumno.nombre" required></ion-input>
+      </ion-item>
+      <br>
+
+      <ion-item class="form-container">
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type="text" name="apellido" [(ngModel)]="newAlumno.apellido" required></ion-input>
+      </ion-item>
+      
+      <br>
+
+
+      <ion-item class="form-container">
+        <ion-label position="floating">Rut</ion-label>
+        <ion-input type="text" name="rut" [(ngModel)]="newAlumno.rut" required></ion-input>
+      </ion-item>
+      
+      <br>
+
+      <ion-item class="form-container">
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="text" name="correo" [(ngModel)]="newAlumno.correo" required email></ion-input>  
+      </ion-item>
+
+      <br> 
+      
+      <ion-item class="form-container">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" name="contrasena" [(ngModel)]="newAlumno.contrasena" required></ion-input>
+      </ion-item>
+
+      <ion-button (click)="RegistrarAlumno()" expand="block">Registrar</ion-button>
+
+    </form>
+</ion-content>
+
+

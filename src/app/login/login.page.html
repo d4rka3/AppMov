@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-toolbar>
    <ion-title></ion-title>
@@ -12,16 +13,18 @@
 <br>
     <ion-item  class="form-container">
       <ion-label position="floating">Nombre de Usuario</ion-label>
-      <ion-input type="text" [(ngModel)]="Usuario"></ion-input>
+      <ion-input type="text" [(ngModel)]="Usuario" name="usuario"></ion-input>
     </ion-item>
 <br>
     <ion-item class="form-container">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="{{ hide ? 'password' : 'text' }}"></ion-input>
-      <ion-icon name="{{ hide ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePassword()"></ion-icon>
+      <ion-input type="{{ hide ? 'password' : 'text' }}" [(ngModel)]="contrasena" name="contrasena"></ion-input>
+      <ion-icon name="{{ hide ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePassword()"> </ion-icon>
+
     </ion-item>
 
 <br>
+
 
 
 <ion-button class="custom-input" (click)="login()">Ingresar </ion-button>
@@ -29,6 +32,11 @@
   <ion-link [routerLink]="['/recuperar']" color="primary" id="ContraseñaPerdida">
       ¿Olvidaste tu contraseña?, clickea aqui.
   </ion-link>
+
+  <ion-link [routerLink]="['/registrar']" color="primary" id="NoTienesCuenta">
+    ¿No tienes cuenta? Regístrate aquí.
+  </ion-link>
   
 </ion-content>
+
 
