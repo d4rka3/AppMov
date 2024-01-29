@@ -13,21 +13,20 @@ export class SqlService {
   constructor(private httpclient: HttpClient) { }
 
   GuardarAlumno(newAlumno: Alumnos): Observable<Alumnos> {
-    return this.httpclient.post<Alumnos>(`${environment.apiURl}/AlumnosRegistro`, newAlumno);
+    return this.httpclient.post<Alumnos>(`${environment.apiUrl}/AlumnosRegistro`, newAlumno);
   }
 
   ObtenerUsuarioPorCredenciales(nombre: string, contrasena: string): Observable<Alumnos | null> {
-    return this.httpclient.get<Alumnos[]>(`${environment.apiURl}/AlumnosRegistro`)
+    return this.httpclient.get<Alumnos[]>(`${environment.apiUrl}/AlumnosRegistro`)
       .pipe(
         map(alumnos => alumnos.find(alumno => alumno.nombre === nombre && alumno.contrasena === contrasena) || null)
       );
   }
 
   obtenerAlumnos(): Observable<Alumnos[]> {
-    return this.httpclient.get<Alumnos[]>(`${environment.apiURl}/AlumnosRegistro`);
+    return this.httpclient.get<Alumnos[]>(`${environment.apiUrl}/AlumnosRegistro`);
   }
 
 }
-
 
 

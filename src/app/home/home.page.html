@@ -1,12 +1,3 @@
-
-<ion-header>
-  <mat-toolbar>
-    <ion-button [routerLink]="['/perfil']" shape="round">
-      <ion-icon slot="icon-only" name="person-outline"></ion-icon>
-    </ion-button >
-  </mat-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-card>
     <ion-card-content class="card">
@@ -14,52 +5,18 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
-    <ion-card-title>Sección: </ion-card-title>
-    <ion-card-content>Alumnos: </ion-card-content>
-    <ion-card-content>Ausentes: </ion-card-content>
+  <ion-list>
+    <ion-item *ngFor="let barcode of barcodes">
+      <ion-label position="stacked">Barcode Value</ion-label>
+      <ion-input type="text" [value]="barcode"></ion-input>
+    </ion-item>
+  </ion-list>
 
-    <ion-list>
-      <ion-item>
-        Alumno 1
-        <ion-thumbnail slot="end">
-          <ion-toggle></ion-toggle>
-        </ion-thumbnail>
-      </ion-item>
-      <ion-item>
-        Alumno 2
-        <ion-thumbnail slot="end">
-          <ion-toggle></ion-toggle>
-        </ion-thumbnail>
-      </ion-item>
-      <ion-item>
-        Alumno 3
-        <ion-thumbnail slot="end">
-          <ion-toggle></ion-toggle>
-        </ion-thumbnail>
-      </ion-item>
-      <ion-item>
-        Alumno 4
-        <ion-thumbnail slot="end">
-          <ion-toggle></ion-toggle>
-        </ion-thumbnail>
-      </ion-item>
-      <ion-item>
-        Alumno 5
-        <ion-thumbnail slot="end">
-          <ion-toggle></ion-toggle>
-        </ion-thumbnail>
-      </ion-item>
-      <ion-item>
-        Alumno 6
-        <ion-thumbnail slot="end">
-          <ion-toggle></ion-toggle>
-        </ion-thumbnail>
-      </ion-item>
-    </ion-list>
-
-    <div style="text-align: right;">
-      <!-- Eliminé el bloque del ion-alert ya que mencionaste que quieres eliminarlo -->
-    </div>
-  </ion-card>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="scan()" [disabled]="!isSupported">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
+
+<ion-button class="custom-input"  [routerLink]="['/qr']">Ir a Qr </ion-button>
