@@ -21,30 +21,25 @@ export class LoginPage {
       return;
     }
 
-    // Comentamos la lógica de redirección basada en si el usuario está autenticado o no
-    // this.sqlService.ObtenerUsuarioPorCredenciales(this.Usuario, this.contrasena).subscribe(
-    //   usuario => {
-    //     if (usuario) {
-    //       // Usuario autenticado, redirigir al home con el nombre de usuario como información adicional
-    //       this.router.navigate(['/home'], { state: { username: this.Usuario } });
-    //     } else {
-    //       // Credenciales incorrectas
-    //       alert('Credenciales incorrectas. Por favor, verifica tu nombre de usuario y contraseña.');
-    //     }
-    //   },
-    //   error => {
-    //     // Manejo de errores
-    //     console.error(error);
-    //     alert('Ocurrió un error al intentar iniciar sesión. Por favor, inténtalo nuevamente.');
-    //   }
-    // );
-
-    // Agregamos una nueva lógica para redirigir al home sin importar las credenciales
-    this.router.navigate(['/home'], { state: { username: this.Usuario } });
+    this.sqlService.ObtenerUsuarioPorCredenciales(this.Usuario, this.contrasena).subscribe(
+      usuario => {
+        if (usuario) {
+          // Usuario autenticado, redirigir al home con el nombre de usuario como información adicional
+          this.router.navigate(['/home'], { state: { username: this.Usuario } });
+        } else {
+          // Credenciales incorrectas
+          alert('Credenciales incorrectas. Por favor, verifica tu nombre de usuario y contraseña.');
+        }
+      },
+      error => {
+        // Manejo de errores
+        console.error(error);
+        alert('Ocurrió un error al intentar iniciar sesión. Por favor, inténtalo nuevamente.');
+      }
+    );
   }
 
   togglePassword() {
     this.hide = !this.hide;
   }
 }
-

@@ -1,3 +1,12 @@
+
+<ion-header>
+  <mat-toolbar>
+    <ion-button [routerLink]="['/perfil']" shape="round">
+      <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+    </ion-button >
+  </mat-toolbar>
+</ion-header>
+
 <ion-content>
   <ion-card>
     <ion-card-content class="card">
@@ -12,11 +21,9 @@
     </ion-item>
   </ion-list>
 
-  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button (click)="scan()" [disabled]="!isSupported">
-      <ion-icon name="scan"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-</ion-content>
 
-<ion-button class="custom-input"  [routerLink]="['/qr']">Ir a Qr </ion-button>
+    <ion-button class="custom-input"  (click)="scan()"> 
+      <ion-icon name="scan"> </ion-icon>
+    </ion-button>
+
+</ion-content>
